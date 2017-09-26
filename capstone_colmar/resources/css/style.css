@@ -1,0 +1,653 @@
+/******Colors
+    deepskyblue = Link hover and link text
+    lightgray = Banner, section and article BGs, and borders
+    dimgray = Header color and footer.
+    #777777 = For lighter article text, blockquotes, etc.
+    #444444 = Main color: h2s, p, citations, and banner button
+   
+******/
+
+
+
+
+
+/******Global styles******/
+html{
+    font-family: "Open San", sans-serif;
+}
+
+h1{
+    position: relative;
+    display: inline;
+    right: 5000px;
+    visibility: hidden;
+}
+
+h2{
+    font-size: 1.75em;
+    font-weight: 900;
+    margin:32px 0;
+    color: #444444;
+}
+
+h3{
+    font-size:1em;
+    font-weight: bold;
+}
+
+.container{
+    margin: 0 24px;
+}
+
+
+
+/******Header Styles******/
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 64px;
+    color: dimgray;
+    background: white;
+    z-index: 100;
+    transition:.15s ease-in-out .10s;
+}
+
+#header-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+#logo-section{
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 1em;
+    
+}
+/*
+header:hover{
+    color: deepskyblue;
+}*/
+
+#logo-section span{
+    color: black;
+    font-weight: bold;
+}
+
+#header-group li{
+    display: inline-block;
+    padding-left: 16px;      
+}
+
+nav a{
+    color:inherit;
+    transition:.15s ease-in-out .10s; 
+}
+
+nav a:hover{
+    color: deepskyblue;
+}
+
+#mobilenav-section{
+    display: none;
+}
+
+
+
+/******Banner Section Styles******/
+
+
+
+#banner-section{
+    background-color: lightgray;
+    padding: 32px 0;
+    position: relative;
+    top: 64px;
+}
+
+#banner-content{
+    display: flex;
+    align-items:center;
+}
+
+.big-image{
+    width:60%;
+}
+
+.big-image img{
+    width: 100%;
+}
+
+#banner-text{
+    width: 30%;
+    color: #444444;
+}
+
+#banner-text h2{
+    margin-top: 0;
+}
+
+#banner-text a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #444444;
+    color: white;
+    padding: 8px 0;
+}
+
+#banner-text span{
+    display: block;
+}
+
+
+#banner-text h2, span, a{
+    line-height: 1.5em;
+}
+
+#banner-text span, a{
+    margin-top: 1.25em;
+}
+
+#banner-text a{
+    font-weight: 200;
+    transition: .15s ease-out .10s; 
+}
+
+#banner-text a:hover{
+    background-color: deepskyblue; 
+}
+
+
+/******Main Content Styles*****/
+
+#main-section{
+    position: relative;
+    top: 64px;
+    /*margin: 32px 0;*/
+}
+
+#mainsection-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-content{
+    /*display: flex;
+    border: 2px dotted red;*/
+    position: relative;
+    width: 60%;
+    padding: 32px 0;
+}
+
+#main-content img{
+    width: 100%;
+}
+
+#main-content h2{
+    margin-bottom: 24px;
+}
+
+blockquote{
+    font-size: 15px;
+    font-weight: 100;
+    color: #777777;
+}
+
+cite{
+    font-size: 12px;
+    color: #444444;
+    position: relative;
+    top: 32px;
+    /*position: absolute;
+    bottom: 0;*/
+}
+
+
+/******Aside Styles******/
+
+#aside-main{
+    width: 40%;
+    border-left: 1px solid lightgray;
+    /*border: 2px dotted red;*/
+    padding: 16px 0 32px;
+}
+
+
+#aside-main article:nth-child(2), #aside-main article:last-child{
+    border-top:4px solid lightgray; 
+}
+
+article{
+    display: flex;
+    align-items: center;
+}
+
+
+#aside-main article:last-child{
+    background-color: lightgray;
+}
+
+.small-image:first-child{
+    padding: 0 0 16px 16px;
+    width: 35%;
+}
+
+.small-image:nth-child(1), .small-image:last-child{
+    padding: 16px 0 16px 16px;
+    width: 35%;
+}
+
+.small-image img{
+    width: 100%;
+    height: auto;
+}
+
+.mobile{
+    display: none;
+}
+
+.article-text{
+    width: 65%;
+    margin-left: 16px;
+}
+
+
+.article-text p:nth-child(2){
+    margin: 8px 0;
+}
+
+.article-text p{
+    color: #444444;
+}
+
+.article-text a{
+    color: deepskyblue;
+    font-size: 12px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+
+p{
+    font-size: 15px;
+    font-weight: 100;
+}
+
+
+/******Start Learning Section******/
+
+#start-learning{
+    background-color: lightgray;
+    position: relative;
+    top: 64px;
+    padding-bottom: 32px;
+}
+
+#start-learning h2{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 32px;
+}
+
+/*.learning-container{ basically a container to get the proper margins. Moved to learning-articles below
+    
+}*/
+
+#learning-articles{
+    margin: 0 40px 0 72px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#learning-articles-mobile{
+    display: none;
+}
+
+.learning-comp{
+    display: inline-block;
+    color: #444444;
+    background-color: white;
+    margin: 0 32px 32px 0;
+    width: 30%;
+}
+
+
+/*Not Used right now
+#learning-content{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}*/
+
+.learning-comp h3{
+    padding-top: 16px;
+}
+
+.learning-comp .article-text{
+    padding-bottom: 24px;
+}
+
+.learning-comp p{
+    color: #777777;
+}
+
+.learning-comp .article-text{
+    /*width: 100%;*/
+}
+
+.learning-image img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/******Thesis Section******/
+#thesis{
+    position: relative;
+    top: 64px;
+}
+
+#thesis h2{
+    position: relative;
+    text-align: center;
+}
+
+#thesis-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainthesis-content{
+    /*display: flex;
+    border: 2px dotted red;*/
+    width: 60%;
+}
+
+#mainthesis-content img{
+    width: 100%;
+}
+
+#thesis-content video{
+    width: 100%;
+    height: auto;
+}
+
+#mobile-video{
+    display: none;
+} 
+
+#mainthesis-content > h3{
+    margin: 24px 0 8px 0;
+}
+
+
+/******Aside For Thesis Section Styles******/
+
+#aside-thesis{
+    width: 40%;
+}
+
+
+#aside-thesis .as-art:first-child{
+    background-color: lightgray;
+}
+
+#aside-thesis .small-image{
+    padding: 16px 0 16px 16px;
+    width: 35%;
+}
+
+
+
+
+
+
+
+/******footer******/
+
+footer{
+    position: relative;
+    top: 64px;
+    margin: 32px 4px;
+    border-top: 1px solid lightgray;
+    height: 64px;
+}
+
+#footer-content{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: dimgray;
+    padding-top: 16px;
+}
+
+
+#footer-content a{
+    color: dimgray;
+    transition:.15s ease-in-out .10s;
+}
+
+#footer-content a:hover{
+    color: deepskyblue;
+}
+
+
+
+/******Mobile******/
+
+
+@media only screen and (max-width: 600px){
+    .container{
+        margin: 0 16px; /** Make html version without a container**/
+    }
+
+         /**----Header-----***/
+
+    #logotype{/***/
+        display: none;
+    }
+
+        #nav-section{
+            display: none;
+        } 
+
+    #mobilenav-section{
+        display: inline;
+        }    
+
+    #header-group li{/***/
+        display:inline;
+        padding-left: 2em;  
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+
+
+        /**----Banner-----***/
+
+    #banner-section > .container{/***/
+        margin: 0 0 32px 0; 
+    }
+    
+    #banner-section{
+        padding-top: 0;
+    }
+
+    #banner-content{/***/
+        display: block;
+    }
+
+    .big-image{
+            width: 100%;
+        }     
+
+    .big-image img{/***/
+         width: 100%;
+    } 
+    
+    #banner-text{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    #banner-text h2{
+        margin: 32px 0;
+    }
+
+
+       /**--- Maint Content------***/  
+
+    #main-content{/***/
+        display: none;
+    }
+
+
+    /******---Asides-----*****/    
+
+    .desktop{
+            display: none;
+        }
+
+    .mobile{
+            display: block;
+        }  
+    
+    article{
+        display: block;
+        width: 100%;
+    }
+
+    #aside-main{
+        padding-top: 0;
+        border-left: none;
+        width: 100%;
+    }  
+    
+    #aside-main article:nth-child(2), #aside-main article:last-child{
+        border-top:none; 
+    }  
+
+    #aside-main article:last-child{ /*****/
+        background-color: white;
+    }
+
+    .small-image{ /*** Change to mobile pictures!!**/
+        width: 100%;
+        padding: 16px 16px 64px;
+
+    }
+
+    .small-image:nth-child(1), .small-image:last-child {
+        padding: 16px 0 16px 16px;
+        width: 100%;  
+    }
+
+    
+    .article-text{
+        width: 65%;
+        margin-left: 16px;
+    }  
+    
+    
+    /******-----Start Learning Section-------******/
+    
+    #start-learning{
+        background-color: white;
+        position: relative;
+        top: 64px;
+        padding-bottom: 0;
+    }    
+
+
+    #learning-articles{
+        display: none;
+    }
+
+    
+    #learning-articles-mobile{
+        display: block;
+        width: 100%;
+    }    
+
+    #learning-articles-mobile h3{
+        width: 100%;
+        color: #333333;
+        font-size: 2em;
+        font-weight: 400;
+        padding: 16px 0 24px 16px;
+        margin: 8px 16px;
+        background-color: lightgray;
+    }
+    
+    #learning-articles-mobile:last-child{
+        padding-bottom: 32px;
+    }
+
+
+     /******-----Thesis Content-------******/   
+
+
+    #thesis-content{
+        display: block;
+    }
+
+    #mainthesis-content{
+       display: none;  
+    }
+
+     h2{
+        margin: 32px 0 16px 0;
+    }
+
+    #thesis-content #video{
+        display: none;
+    }    
+
+    #mobile-video{
+        width: 100%;
+        display: block;
+        margin-bottom: 24px;
+    }      
+
+
+    #aside-thesis{
+        display: none;
+    }
+
+
+    #aside-thesis{
+        display: none;
+    }
+
+
+
+    /******-----Footer Section-------******/   
+
+    footer{
+        border-top: none;
+        margin: 0;
+    }  
+    
+    #footer-content{
+        padding-top: 16px 0;
+    }
+
+
+    #copyright{/******/
+    }
+
+    
+    #terms-privacy{/*****/
+        display: none;
+    }
+
+}
